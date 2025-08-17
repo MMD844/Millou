@@ -22,7 +22,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Basic(optional = false)
     private String name;
@@ -43,7 +43,7 @@ public class User {
         createdAt = Timestamp.valueOf(LocalDateTime.now());
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -63,7 +63,7 @@ public class User {
         return createdAt;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

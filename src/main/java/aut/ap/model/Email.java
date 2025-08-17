@@ -1,9 +1,11 @@
 package aut.ap.model;
 
 import jakarta.persistence.*;
-
+import aut.ap.Services.EmailService;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 @Entity
 @Table(name = "emails")
@@ -57,12 +59,20 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email{" +
-                "id=" + id +
-                ", sender=" + sender +
-                ", subject='" + subject + '\'' +
-                ", body='" + body + '\'' +
-                ", sendTime=" + sendTime +
-                '}';
+        String code = EmailService.madeCode(id);
+
+        String date = sendTime.toLocalDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
+        List<User> recipient = EmailService.findRecipientOfEmail(this);
+        String recipientList = recipient.getFirst().getEmail();
+
+        for (int i = 1; i < recipient.size(); i ++)
+            recipientList +=", " + recipient.get(i).getEmail();
+
+        return "Code: " + code + "\n" +
+                "Recipient(s): " + recipientList + "\n" +
+                "Subject: " + subject + "\n" +
+                "Date: " + date + "\n\n" +
+                body;
     }
 }

@@ -15,7 +15,6 @@ public class EmailService {
 
         Email email = makeEmail(sender, subject, body);
 
-
         for (User recip : recipients) {
             SingletonSessionFactory.get()
                     .inTransaction(session ->
@@ -30,7 +29,7 @@ public class EmailService {
 
     public static List<Email> showAllEmails(User viewer) {
         if (viewer == null)
-            throw new IllegalArgumentException("Please choose your sender");
+            throw new IllegalArgumentException("Please fill your sender field");
 
         return SingletonSessionFactory.get()
                 .fromTransaction(session ->
@@ -41,7 +40,6 @@ public class EmailService {
                                         , Email.class)
                                 .setParameter("recipient_id", viewer.getId())
                                 .getResultList());
-
     }
 
     public static List<Email> readUnreadEmails(User user) {
@@ -145,6 +143,14 @@ public class EmailService {
         return reply;
     }
 
+    public static String madeCode (int id) {
+        String code = Integer.toString(id, 36);
+        int len = code.length();
+        for (int i = 0; i < 6 - len; i++)
+            code = "0" + code;
+        return code;
+    }
+
     public static Email forwardEmail(User sender, String code, List<User> recipients) {
         Email email = findByCode(code);
 
@@ -168,5 +174,50 @@ public class EmailService {
                                         , Email.class)
                                 .setParameter("email_id", emailId)
                                 .getSingleResult());
+    }
+    public static void deleteEmail(User user, Email email) {
+        if (user == null) {
+            throw new IllegalArgumentException("User can't be empty!");
+        }
+
+        if (email == null) {
+            throw new IllegalArgumentException("You don't choose the email!");
+        }
+
+        boolean isSender = email.getSender().getId().equals(user.getId());
+
+        boolean isRecipient = findRecipientOfEmail(email).stream().anyMatch(recipient -> recipient.getId().equals(user.getId()));
+
+        Integer emailId = email.getId();
+
+        if (!isRecipient && !isSender) {
+            throw new IllegalArgumentException("You are not able to delete this email :(You don't have primission)");
+        }
+
+        if (isSender) {
+            SingletonSessionFactory.get()
+                    .fromTransaction(session ->
+                            session.createNativeMutationQuery("delete from email_recipients " +
+                                            "where email_id = : email_id")
+                                    .setParameter("email_id", emailId)
+                                    .executeUpdate());
+
+            SingletonSessionFactory.get()
+                    .fromTransaction(session ->
+                            session.createNativeMutationQuery("delete from emails " +
+                                            "where email_id = :email_id")
+                                    .setParameter("email_id", emailId)
+                                    .executeUpdate());
+        }
+
+        else {
+            SingletonSessionFactory.get()
+                    .fromTransaction(session ->
+                            session.createNativeMutationQuery("delete from email_recipients " +
+                                            "where email_id = : email_id and recipient_id = :recipient_id")
+                                    .setParameter("email_id", emailId)
+                                    .setParameter("recipient_id", user.getId())
+                                    .executeUpdate());
+        }
     }
 }
