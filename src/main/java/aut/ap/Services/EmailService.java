@@ -68,10 +68,10 @@ public class EmailService {
                                 .getResultList());
     }
 
-    public static void readEmail(User reader, Email email) {
+    public static void readEmail(User reader, String code) {
         if (reader == null) throw new IllegalArgumentException("Please choose your sender");
 
-        if (!(email.getSender().equals(reader)) && !(findRecipientOfEmail(email).equals(reader)))
+        if (!(findByCode(code).getSender().equals(reader)) && !(findRecipientOfEmail(code).equals(reader)))
             throw new IllegalArgumentException("You cannot read this email.");
 
         if (!SingletonSessionFactory.get().fromTransaction(session ->
@@ -79,14 +79,14 @@ public class EmailService {
                                 "from email_recipients " +
                                 "where recipient_id = :reader_id and email_id = :email_id", Timestamp.class)
                         .setParameter("reader_id", reader.getId())
-                        .setParameter("email_id", email.getId())
+                        .setParameter("email_id", findByCode(code).getId())
                         .getResultList()).isEmpty()
                 && SingletonSessionFactory.get().fromTransaction(session ->
                 session.createNativeQuery("select read_time " +
                                 "from email_recipients " +
                                 "where recipient_id = :reader_id and email_id = :email_id", Timestamp.class)
                         .setParameter("reader_id", reader.getId())
-                        .setParameter("email_id", email.getId())
+                        .setParameter("email_id", findByCode(code).getId())
                         .getSingleResult()) != null)
             return;
 
@@ -96,12 +96,15 @@ public class EmailService {
                                 "where recipient_id = :reader_id and email_id = :email_id")
                         .setParameter("now", Timestamp.valueOf(LocalDateTime.now()))
                         .setParameter("reader_id", reader.getId())
-                        .setParameter("email_id", email.getId())
+                        .setParameter("email_id", findByCode(code).getId())
                         .executeUpdate());
 
     }
 
-    public static List<User> findRecipientOfEmail(Email email) {
+    public static List<User> findRecipientOfEmail(String code) {
+
+        Email email = findByCode(code);
+
         return SingletonSessionFactory.get()
                 .fromTransaction(session ->
                         session.createNativeQuery("select u.id, u.name, u.email, u.password, u.created_at " +
@@ -132,11 +135,10 @@ public class EmailService {
     }
 
     public static Email replyEmail(User sender, String code, String body) {
-        Email email = findByCode(code);
-        List<User> recipients = findRecipientOfEmail(email);
-        recipients.remove(email.getSender());
+        List<User> recipients = findRecipientOfEmail(code);
+        recipients.remove(findByCode(code).getSender());
 
-        Email reply = makeEmail(sender, "[Re] " + email.getSubject(), body);
+        Email reply = makeEmail(sender, "[Re] " + findByCode(code).getSubject(), body);
 
         sendEmail(sender, reply.getSubject(), reply.getBody(), recipients);
 
@@ -175,20 +177,20 @@ public class EmailService {
                                 .setParameter("email_id", emailId)
                                 .getSingleResult());
     }
-    public static void deleteEmail(User user, Email email) {
+
+    public static void deleteEmail(User user, String code) {
         if (user == null) {
             throw new IllegalArgumentException("User can't be empty!");
         }
 
-        if (email == null) {
-            throw new IllegalArgumentException("You don't choose the email!");
+        if (code == null) {
+            throw new IllegalArgumentException("Code field can not be empty!");
         }
 
-        boolean isSender = email.getSender().getId().equals(user.getId());
+        boolean isSender = findByCode(code).getSender().getId().equals(user.getId());
 
-        boolean isRecipient = findRecipientOfEmail(email).stream().anyMatch(recipient -> recipient.getId().equals(user.getId()));
-
-        Integer emailId = email.getId();
+        boolean isRecipient = findRecipientOfEmail(code).stream().anyMatch(recipient -> recipient.getId().equals(user.getId()));
+        Integer emailId = findByCode(code).getId();
 
         if (!isRecipient && !isSender) {
             throw new IllegalArgumentException("You are not able to delete this email :(You don't have primission)");
@@ -219,5 +221,34 @@ public class EmailService {
                                     .setParameter("recipient_id", user.getId())
                                     .executeUpdate());
         }
+    }
+
+    public static void editEmail(User editor, String code, String newSubject, String newBody) {
+
+        if (editor == null)
+            throw new IllegalArgumentException("Editor cannot be null!");
+        if (code == null)
+            throw new IllegalArgumentException("Code cannot be null!");
+        if (newSubject == null || newSubject.isEmpty())
+            throw new IllegalArgumentException("Subject cannot be empty!");
+        if (newBody == null || newBody.isEmpty())
+            throw new IllegalArgumentException("Body cannot be empty!");
+
+        Email email = findByCode(code);
+
+        if (!email.getSender().getId().equals(editor.getId())) {
+            throw new IllegalArgumentException("Only the sender can edit the email!");
+        }
+
+        if (!email.getSubject().startsWith("[Edited] ")) {
+            email.setSubject("[Edited] " + email.getSubject());
+        }
+
+        String editedBody = newBody + "\n\n[Edited at: " + LocalDateTime.now() + "]";
+        email.setBody(editedBody);
+
+        SingletonSessionFactory.get().inTransaction(session -> {
+            session.merge(email);
+        });
     }
 }

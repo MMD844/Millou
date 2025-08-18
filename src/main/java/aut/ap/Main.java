@@ -13,15 +13,14 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Main {
-    // Sizes
-    static Dimension mainMenuSize = new Dimension(500, 300);
-    static Dimension accountSize = new Dimension(500, 400);
-    static Dimension buttonSize = new Dimension(150, 50);
-    static Dimension imageSize = new Dimension(190, 190);
 
     static HashMap<Integer, ArrayList<JList<String>>> accountUnreadList = new HashMap<>();
     static HashMap<Integer, ArrayList<JList<String>>> accountAllList = new HashMap<>();
     static HashMap<Integer, ArrayList<JList<String>>> accountSentList = new HashMap<>();
+    static Dimension mainMenuSize = new Dimension(500, 300);
+    static Dimension accountSize = new Dimension(500, 400);
+    static Dimension buttonSize = new Dimension(150, 50);
+    static Dimension imageSize = new Dimension(150, 150);
 
     public static void main(String[] args) {
         final int[] accountCount = {0};
@@ -41,23 +40,23 @@ public class Main {
 
         ImageIcon millouIcon = new ImageIcon("src\\assets\\img.png");
         JLabel millouLabel = new JLabel(new ImageIcon(millouIcon.getImage().getScaledInstance(imageSize.width, imageSize.height, Image.SCALE_SMOOTH)));
-        millouLabel.setBounds(50, 35, imageSize.width, imageSize.height);
+        millouLabel.setBounds(165, 10, imageSize.width, imageSize.height);
         publicPanel.add(millouLabel);
 
         JButton logInButton = new JButton("Log In");
-        logInButton.setLocation(300, 35);
+        logInButton.setLocation(10, 195);
         logInButton.setSize(buttonSize);
         publicPanel.add(logInButton);
         logInButton.setMargin(new Insets(2,5,2,5));
 
         JButton signUpButton = new JButton("Sign Up");
-        signUpButton.setLocation(300, 105);
+        signUpButton.setLocation(171, 195);
         signUpButton.setSize(buttonSize);
         publicPanel.add(signUpButton);
         signUpButton.setMargin(new Insets(2,5,2,5));
 
         JButton quitButton = new JButton("Quit");
-        quitButton.setLocation(300, 175);
+        quitButton.setLocation(330, 195);
         quitButton.setSize(buttonSize);
         publicPanel.add(quitButton);
         quitButton.setMargin(new Insets(2,5,2,5));
@@ -87,13 +86,13 @@ public class Main {
 
         JButton logInSubmitButton = new JButton("Submit");
         logInSubmitButton.setSize(buttonSize);
-        logInSubmitButton.setLocation(190, 125);
+        logInSubmitButton.setLocation(270, 175);
         logInPanel.add(logInSubmitButton);
         logInSubmitButton.setMargin(new Insets(2,5,2,5));
 
         JButton logInBackButton = new JButton("Back");
         logInBackButton.setSize(buttonSize);
-        logInBackButton.setLocation(190, 175);
+        logInBackButton.setLocation(100, 175);
         logInPanel.add(logInBackButton);
         logInBackButton.setMargin(new Insets(2,5,2,5));
 
@@ -114,58 +113,123 @@ public class Main {
                 // Account Frame
                 JFrame newFrame = new JFrame(user.getName());
                 newFrame.setSize(accountSize);
-                int accountLocType = (accountCount[0] + 1) % 4;
-                newFrame.setLocation(((accountLocType + 1) % 2) * 1040, ((accountLocType / 2) % 2) * 400);
 
                 // Account Main Panel
                 JPanel accMainPanel = new JPanel(null);
                 accMainPanel.setBounds(0, 0, accountSize.width, accountSize.height);
-                accMainPanel.setBackground(new Color(0xFFFFFF));
+                accMainPanel.setBackground(new Color(0x88FFFFFF, true));
 
-                showEmails(accMainPanel, "Unread Emails", EmailService.readUnreadEmails(user), 0, 0, accountSize.width - (buttonSize.width + 20), accountSize.height, user.getId());
+                showEmails(accMainPanel, "Unread Emails", EmailService.readUnreadEmails(user), 0, 0, accountSize.width , 300, user.getId());
 
                 JButton sendButton = new JButton("Send");
-                sendButton.setBounds(332, 10, buttonSize.width, buttonSize.height);
-                ImageIcon sendIcon = new ImageIcon("src\\assets\\img_3.png");
-                sendButton.setIcon(sendIcon);
+                sendButton.setBounds(397, 310, 75, 50);
                 accMainPanel.add(sendButton);
                 sendButton.setMargin(new Insets(2,5,2,5));
 
-
                 JButton viewButton = new JButton("View");
-                viewButton.setBounds(332, 70, buttonSize.width, buttonSize.height);
+                viewButton.setBounds(322, 310, 75,50);
                 accMainPanel.add(viewButton);
                 viewButton.setMargin(new Insets(2,5,2,5));
 
-
                 JButton replyButton = new JButton("Reply");
-                replyButton.setBounds(332, 130, buttonSize.width, buttonSize.height);
+                replyButton.setBounds(247, 310, 75, 50);
                 accMainPanel.add(replyButton);
                 replyButton.setMargin(new Insets(2,5,2,5));
 
                 JButton forwardButton = new JButton("Forward");
-                forwardButton.setBounds(332, 190, buttonSize.width, buttonSize.height);
+                forwardButton.setBounds(172, 310, 75, 50);
                 accMainPanel.add(forwardButton);
                 forwardButton.setMargin(new Insets(2,5,2,5));
 
-
-                JButton deleteButton = new JButton();
-                ImageIcon deleteIcon = new ImageIcon("src\\assets\\img_2.png");
-                deleteButton.setBounds(332, 250, buttonSize.width, buttonSize.height);
-                deleteButton.setIcon(deleteIcon);
+                JButton deleteButton = new JButton("Delete");
+                deleteButton.setBounds(97, 310,75, 50);
                 deleteButton.setMargin(new Insets(2,5,2,5));
                 accMainPanel.add(deleteButton);
 
-                JButton accQuitButton = new JButton("Log out");
-                accQuitButton.setBounds(332, 310, buttonSize.width, buttonSize.height);
+                JButton accQuitButton = new JButton("Logout");
+                accQuitButton.setBounds(22, 310, 75, 50);
+                accQuitButton.setMargin(new Insets(2,5,2,5));
                 accMainPanel.add(accQuitButton);
+
+                JButton editButton = new JButton("Edit");
+                editButton.setBounds(209, 360, 75,50);
+                editButton.setMargin(new Insets(2, 5, 2, 5));
+                accMainPanel.add(editButton);
+
+                //edit Panel
+                JPanel editPanel = new JPanel();
+                editPanel.setLayout(null);
+                editPanel.setSize(mainMenuSize);
+                editPanel.setLocation(0, 0);
+                editPanel.setBackground(new Color(0x79FFFFFF, true));
+
+                JLabel editCode = new JLabel("Code:");
+                editCode.setBounds(100, 45, 80, 25);
+                JTextField editCodeField = new JTextField();
+                editCodeField.setBounds(190, 45, 200, 25);
+                editPanel.add(editCode);
+                editPanel.add(editCodeField);
+
+                JLabel editSubject = new JLabel("Subject:");
+                editSubject.setBounds(100, 70, 80, 25);
+                JTextField editSubjectField = new JTextField();
+                editSubjectField.setBounds(190, 70, 200, 25);
+                editPanel.add(editSubject);
+                editPanel.add(editSubjectField);
+
+                JLabel editBody = new JLabel("Body:");
+                editBody.setBounds(100, 95, 80, 25);
+                JTextField editBodyField = new JTextField();
+                editBodyField.setBounds(190, 95, 200, 25);
+                editPanel.add(editBody);
+                editPanel.add(editBodyField);
+
+                JButton editSendButton = new JButton("Send");
+                editSendButton.setSize(buttonSize);
+                editSendButton.setLocation(190, 125);
+                editPanel.add(editSendButton);
+
+                JButton editBackButton = new JButton("Back");
+                editBackButton.setSize(buttonSize);
+                editBackButton.setLocation(190, 175);
+                editPanel.add(editBackButton);
+
+                editSendButton.addActionListener(e1 -> {
+                    String code = editCodeField.getText();
+                    String newSubject = editSubjectField.getText();
+                    String body = editBodyField.getText();
+
+                    try {
+                       EmailService.editEmail(user, code, newSubject, body);
+
+                       String resultMassage = "Edit succesfully!";
+
+                        JOptionPane.showMessageDialog(newFrame, resultMassage);
+                    } catch (Exception ex) {
+                        JOptionPane.showMessageDialog(newFrame,"Error: " + ex.getMessage());
+                    }
+                });
+
+                editBackButton.addActionListener(e1 -> {
+                    newFrame.remove(editPanel);
+                    newFrame.add(accMainPanel);
+                    newFrame.repaint();
+                    newFrame.revalidate();
+                });
+
+                editButton.addActionListener(e2 -> {
+                    newFrame.remove(accMainPanel);
+                    newFrame.add(editPanel);
+                    newFrame.repaint();
+                    newFrame.revalidate();
+                });
 
                 // Send Panel
                 JPanel sendPanel = new JPanel();
                 sendPanel.setLayout(null);
                 sendPanel.setSize(mainMenuSize);
                 sendPanel.setLocation(0, 0);
-                sendPanel.setBackground(new Color(0xFFFFFF));
+                sendPanel.setBackground(new Color(0x79FFFFFF, true));
 
                 JLabel sendRecipients = new JLabel("Recipient(s):");
                 sendRecipients.setBounds(100, 45, 80, 25);
@@ -232,6 +296,7 @@ public class Main {
                         JOptionPane.showMessageDialog(newFrame,"Error: " + ex.getMessage());
                     }
                 });
+
                 sendBackButton.addActionListener(e1 -> {
                     newFrame.remove(sendPanel);
                     newFrame.add(accMainPanel);
@@ -308,7 +373,7 @@ public class Main {
                     if (code != null) {
                         try {
                             Email foundEmail = EmailService.findByCode(code);
-                            EmailService.readEmail(user, EmailService.findByCode(code));
+                            EmailService.readEmail(user, code);
                             refreshUsers(Arrays.asList(user));
 
                             JPanel readPanel = new JPanel(null);
@@ -392,7 +457,7 @@ public class Main {
                         String code = replyCodeField.getText();
                         String body = replyBodyField.getText();
                         Email repliedEmail = EmailService.replyEmail(user, code, body);
-                        refreshUsers(EmailService.findRecipientOfEmail(repliedEmail));
+                        refreshUsers(EmailService.findRecipientOfEmail(EmailService.madeCode(repliedEmail.getId())));
                         refreshUsers(Arrays.asList(user));
 
                         JOptionPane.showMessageDialog(newFrame, "Successfully sent your reply to email" + code + "\nCode: " + EmailService.madeCode(repliedEmail.getId()));
@@ -420,7 +485,7 @@ public class Main {
                 forwardPanel.setLayout(null);
                 forwardPanel.setSize(mainMenuSize);
                 forwardPanel.setLocation(0, 0);
-                forwardPanel.setBackground(new Color(0xFFFFFF));
+                forwardPanel.setBackground(new Color(0x80FFFFFF, true));
 
                 JLabel forwardCode = new JLabel("Code:");
                 forwardCode.setBounds(100, 45, 80, 25);
@@ -502,8 +567,8 @@ public class Main {
                         if (code != null) {
                             try {
                                 Email deletedEmail = EmailService.findByCode(code);
-                                List<User> recipients = EmailService.findRecipientOfEmail(EmailService.findByCode(code));
-                                EmailService.deleteEmail(user, EmailService.findByCode(code));
+                                List<User> recipients = EmailService.findRecipientOfEmail(code);
+                                EmailService.deleteEmail(user, code);
                                 refreshUsers(recipients);
                                 refreshUsers(Arrays.asList(user));
 
@@ -525,7 +590,6 @@ public class Main {
 
                 newFrame.setVisible(true);
 
-                accountCount[0]++;
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(mainFrame,"Error: " + ex.getMessage());
             }
@@ -549,7 +613,7 @@ public class Main {
         signUpPanel.setLayout(null);
         signUpPanel.setSize(mainMenuSize);
         signUpPanel.setLocation(0, 0);
-        signUpPanel.setBackground(new Color(0xFFFFFF));
+        signUpPanel.setBackground(new Color(0x79FFFFFF, true));
 
         JLabel signUpNameLabel = new JLabel("Name:");
         signUpNameLabel.setBounds(100, 15, 80, 25);
@@ -574,12 +638,12 @@ public class Main {
 
         JButton signUpSubmitButton = new JButton("Submit");
         signUpSubmitButton.setSize(buttonSize);
-        signUpSubmitButton.setLocation(190, 125);
+        signUpSubmitButton.setLocation(110, 175);
         signUpPanel.add(signUpSubmitButton);
 
         JButton signUpBackButton = new JButton("Back");
         signUpBackButton.setSize(buttonSize);
-        signUpBackButton.setLocation(190, 175);
+        signUpBackButton.setLocation(270, 175);
         signUpPanel.add(signUpBackButton);
 
         signUpSubmitButton.addActionListener(e -> {
@@ -611,7 +675,7 @@ public class Main {
         // Quit Button
         quitButton.addActionListener(e -> {
             try {
-                PrintWriter writer = new PrintWriter("src\\main\\logs\\hibernate.log");
+                PrintWriter writer = new PrintWriter("C:\\\\Users\\\\moham\\\\IdeaProjects\\\\Millou\\\\src\\\\main\\\\java\\\\aut\\\\ap\\\\log\\\\hibernate.log");
                 writer.print("");
                 writer.close();
             } catch (FileNotFoundException ex) {

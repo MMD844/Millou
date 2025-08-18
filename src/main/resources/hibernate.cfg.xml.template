@@ -21,5 +21,10 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.highlight_sql">true</property>
+         <!-- Mapping -->
+         <mapping class="aut.ap.model.User"/>
+         <mapping class="aut.ap.model.Email"
+         <mapping class="aut.ap.Services.EmailService"/>
+         <mapping class="aut.ap.Services.UserService"/>
     </session-factory>
 </hibernate-configuration>

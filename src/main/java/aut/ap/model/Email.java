@@ -63,7 +63,7 @@ public class Email {
 
         String date = sendTime.toLocalDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-        List<User> recipient = EmailService.findRecipientOfEmail(this);
+        List<User> recipient = EmailService.findRecipientOfEmail(EmailService.madeCode(this.getId()));
         String recipientList = recipient.getFirst().getEmail();
 
         for (int i = 1; i < recipient.size(); i ++)

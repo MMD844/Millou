@@ -414,3 +414,5633 @@ rn = [DEBUG]
 rn = [WARN] SQL Error: 1146, SQLState: 42S02
 [ERROR] Table 'mysql.users' doesn't exist
 rn = [ERROR] Table 'mysql.users' doesn't exist
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[WARN] HHH000342: Could not obtain connection to query metadata
+rn = [WARN] HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:255) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:133) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:507) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:380) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:558) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:107) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:87) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:434) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:305) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:949) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:999) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at aut.ap.framework.SingletonSessionFactory.get(SingletonSessionFactory.java:11) ~[classes/:?]
+	at aut.ap.Services.UserService.findByEmail(UserService.java:8) ~[classes/:?]
+	at aut.ap.Services.UserService.registerUser(UserService.java:19) ~[classes/:?]
+	at aut.ap.Main.lambda$main$21(Main.java:591) ~[classes/:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6621) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3404) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6386) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:744) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[WARN] HHH000342: Could not obtain connection to query metadata
+rn = [WARN] HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:255) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:133) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:507) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:380) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:558) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:107) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:87) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:434) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:305) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:949) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:999) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at aut.ap.framework.SingletonSessionFactory.get(SingletonSessionFactory.java:11) ~[classes/:?]
+	at aut.ap.Services.UserService.findByEmail(UserService.java:8) ~[classes/:?]
+	at aut.ap.Services.UserService.registerUser(UserService.java:19) ~[classes/:?]
+	at aut.ap.Main.lambda$main$21(Main.java:591) ~[classes/:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6621) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3404) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6386) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:744) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[WARN] HHH000342: Could not obtain connection to query metadata
+rn = [WARN] HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:255) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:133) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:507) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:380) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:558) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:107) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:87) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:434) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:305) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:949) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:999) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at aut.ap.framework.SingletonSessionFactory.get(SingletonSessionFactory.java:11) ~[classes/:?]
+	at aut.ap.Services.UserService.findByEmail(UserService.java:8) ~[classes/:?]
+	at aut.ap.Services.UserService.registerUser(UserService.java:19) ~[classes/:?]
+	at aut.ap.Main.lambda$main$21(Main.java:591) ~[classes/:?]
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972) ~[?:?]
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314) ~[?:?]
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407) ~[?:?]
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.awt.Component.processMouseEvent(Component.java:6621) ~[?:?]
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3404) ~[?:?]
+	at java.awt.Component.processEvent(Component.java:6386) ~[?:?]
+	at java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575) ~[?:?]
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:744) [?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        users
+        (name, email, password) 
+    [34mvalues[0m
+        (?, ?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        users
+        (name, email, password) 
+    [34mvalues[0m
+        (?, ?, ?)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        users
+        (name, email, password) 
+    [34mvalues[0m
+        (?, ?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        users
+        (name, email, password) 
+    [34mvalues[0m
+        (?, ?, ?)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        emails
+        (body, created_at, sender_id, subject) 
+    [34mvalues[0m
+        (?, ?, ?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        emails
+        (body, created_at, sender_id, subject) 
+    [34mvalues[0m
+        (?, ?, ?, ?)
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        email_recipients
+        (email_id, recipient_id) 
+    [34mvalues[0m
+        (?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        email_recipients
+        (email_id, recipient_id) 
+    [34mvalues[0m
+        (?, ?)
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        sender_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        sender_id = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        emails
+        (body, created_at, sender_id, subject) 
+    [34mvalues[0m
+        (?, ?, ?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        emails
+        (body, created_at, sender_id, subject) 
+    [34mvalues[0m
+        (?, ?, ?, ?)
+[DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        email_recipients
+        (email_id, recipient_id) 
+    [34mvalues[0m
+        (?, ?)
+rn = [DEBUG] 
+    [34minsert[0m 
+    [34minto[0m
+        email_recipients
+        (email_id, recipient_id) 
+    [34mvalues[0m
+        (?, ?)
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        e1_0.id,
+        e1_0.body,
+        e1_0.created_at,
+        e1_0.sender_id,
+        s1_0.id,
+        s1_0.created_at,
+        s1_0.email,
+        s1_0.name,
+        s1_0.password,
+        e1_0.subject 
+    [34mfrom[0m
+        emails e1_0 
+    [34mjoin[0m
+        users s1_0 
+            [34mon[0m s1_0.id=e1_0.sender_id 
+    [34mwhere[0m
+        e1_0.id=?
+[DEBUG] 
+    [34mupdate[0m
+        emails 
+    [34mset[0m
+        body=?,
+        created_at=?,
+        sender_id=?,
+        subject=? 
+    [34mwhere[0m
+        id=?
+rn = [DEBUG] 
+    [34mupdate[0m
+        emails 
+    [34mset[0m
+        body=?,
+        created_at=?,
+        sender_id=?,
+        subject=? 
+    [34mwhere[0m
+        id=?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        sender_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        sender_id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+rn = [INFO] HHH000412: Hibernate ORM core version 6.6.13.Final
+[INFO] HHH000026: Second-level cache disabled
+rn = [INFO] HHH000026: Second-level cache disabled
+[WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+rn = [WARN] HHH10001002: Using built-in connection pool (not intended for production use)
+[INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+rn = [INFO] HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/Millou_db]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.43
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+[INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+rn = [INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        users 
+    [34mwhere[0m
+        email = ?
+[DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+rn = [DEBUG] 
+    [34mselect[0m
+        e.id,
+        e.sender_id,
+        e.subject,
+        e.body,
+        e.created_at   
+    [34mfrom[0m
+        emails e 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.email_id = e.id 
+    [34mwhere[0m
+        recipient_id = ? 
+        [34mand[0m er.read_at [34mis[0m [34mnull[0m 
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        * 
+    [34mfrom[0m
+        emails e 
+    [34mwhere[0m
+        e.id = ?
+[DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+rn = [DEBUG] 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+[DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
+rn = [DEBUG] 
+    [34mselect[0m
+        u.id,
+        u.name,
+        u.email,
+        u.password,
+        u.created_at 
+    [34mfrom[0m
+        users u 
+    [34mjoin[0m
+        email_recipients er 
+            [34mon[0m er.recipient_id = u.id 
+    [34mwhere[0m
+        er.email_id = ?
