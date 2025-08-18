@@ -75,14 +75,14 @@ public class EmailService {
             throw new IllegalArgumentException("You cannot read this email.");
 
         if (!SingletonSessionFactory.get().fromTransaction(session ->
-                session.createNativeQuery("select read_time " +
+                session.createNativeQuery("select read_at " +
                                 "from email_recipients " +
                                 "where recipient_id = :reader_id and email_id = :email_id", Timestamp.class)
                         .setParameter("reader_id", reader.getId())
                         .setParameter("email_id", findByCode(code).getId())
                         .getResultList()).isEmpty()
                 && SingletonSessionFactory.get().fromTransaction(session ->
-                session.createNativeQuery("select read_time " +
+                session.createNativeQuery("select read_at " +
                                 "from email_recipients " +
                                 "where recipient_id = :reader_id and email_id = :email_id", Timestamp.class)
                         .setParameter("reader_id", reader.getId())
@@ -179,45 +179,38 @@ public class EmailService {
     }
 
     public static void deleteEmail(User user, String code) {
-        if (user == null) {
-            throw new IllegalArgumentException("User can't be empty!");
-        }
+        if (user == null)
+            throw new IllegalArgumentException("Sender is no one");
 
-        if (code == null) {
-            throw new IllegalArgumentException("Code field can not be empty!");
-        }
+        Email email =  findByCode(code);
 
-        boolean isSender = findByCode(code).getSender().getId().equals(user.getId());
+        boolean isSender = email.getSender().getId().equals(user.getId());
+        boolean isRecipient = findRecipientOfEmail(code).contains(user);
 
-        boolean isRecipient = findRecipientOfEmail(code).stream().anyMatch(recipient -> recipient.getId().equals(user.getId()));
-        Integer emailId = findByCode(code).getId();
-
-        if (!isRecipient && !isSender) {
-            throw new IllegalArgumentException("You are not able to delete this email :(You don't have primission)");
-        }
+        if (!isSender && !isRecipient)
+            throw new IllegalArgumentException("You cannot delete this email.");
 
         if (isSender) {
             SingletonSessionFactory.get()
                     .fromTransaction(session ->
                             session.createNativeMutationQuery("delete from email_recipients " +
-                                            "where email_id = : email_id")
-                                    .setParameter("email_id", emailId)
+                                            "where email_id = :email_id")
+                                    .setParameter("email_id", email.getId())
                                     .executeUpdate());
 
             SingletonSessionFactory.get()
                     .fromTransaction(session ->
                             session.createNativeMutationQuery("delete from emails " +
-                                            "where email_id = :email_id")
-                                    .setParameter("email_id", emailId)
+                                            "where id = :email_id")
+                                    .setParameter("email_id", email.getId())
                                     .executeUpdate());
         }
-
         else {
             SingletonSessionFactory.get()
                     .fromTransaction(session ->
                             session.createNativeMutationQuery("delete from email_recipients " +
-                                            "where email_id = : email_id and recipient_id = :recipient_id")
-                                    .setParameter("email_id", emailId)
+                                            "where email_id = :email_id and recipient_id = :recipient_id")
+                                    .setParameter("email_id", email.getId())
                                     .setParameter("recipient_id", user.getId())
                                     .executeUpdate());
         }

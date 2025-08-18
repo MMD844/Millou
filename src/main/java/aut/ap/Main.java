@@ -25,13 +25,11 @@ public class Main {
     public static void main(String[] args) {
         final int[] accountCount = {0};
 
-        // MainMenu Frame
         JFrame mainFrame = new JFrame("MILLOU");
         mainFrame.setLayout(null);
         mainFrame.setSize(mainMenuSize);
         mainFrame.setLocationRelativeTo(null);
 
-        // mainMenu Panel
         JPanel publicPanel = new JPanel();
         publicPanel.setLayout(null);
         publicPanel.setSize(mainMenuSize);
@@ -63,12 +61,11 @@ public class Main {
 
         mainFrame.add(publicPanel);
 
-        // LogInMain Panel
         JPanel logInPanel = new JPanel();
         logInPanel.setLayout(null);
         logInPanel.setSize(mainMenuSize);
         logInPanel.setLocation(0, 0);
-        logInPanel.setBackground(new Color(0xFFFFFF));
+        logInPanel.setBackground(new Color(0x80FFFFFF, true));
 
         JLabel logInEmailLabel = new JLabel("Email:");
         logInEmailLabel.setBounds(100, 45, 80, 25);
@@ -110,11 +107,9 @@ public class Main {
                 if (!accountSentList.containsKey(user.getId()))
                     accountSentList.put(user.getId(), new ArrayList<>());
 
-                // Account Frame
                 JFrame newFrame = new JFrame(user.getName());
                 newFrame.setSize(accountSize);
 
-                // Account Main Panel
                 JPanel accMainPanel = new JPanel(null);
                 accMainPanel.setBounds(0, 0, accountSize.width, accountSize.height);
                 accMainPanel.setBackground(new Color(0x88FFFFFF, true));
@@ -156,7 +151,6 @@ public class Main {
                 editButton.setMargin(new Insets(2, 5, 2, 5));
                 accMainPanel.add(editButton);
 
-                //edit Panel
                 JPanel editPanel = new JPanel();
                 editPanel.setLayout(null);
                 editPanel.setSize(mainMenuSize);
@@ -224,7 +218,6 @@ public class Main {
                     newFrame.revalidate();
                 });
 
-                // Send Panel
                 JPanel sendPanel = new JPanel();
                 sendPanel.setLayout(null);
                 sendPanel.setSize(mainMenuSize);
@@ -311,7 +304,6 @@ public class Main {
                     newFrame.revalidate();
                 });
 
-                // View Panel
                 JPanel viewPanel = new JPanel(null);
                 viewPanel.setSize(accountSize);
                 viewPanel.setBackground(new Color(0xA6FFFFFF, true));
@@ -421,12 +413,11 @@ public class Main {
                     newFrame.repaint();
                 });
 
-                // Reply Panel
                 JPanel replyPanel = new JPanel();
                 replyPanel.setLayout(null);
                 replyPanel.setSize(mainMenuSize);
                 replyPanel.setLocation(0, 0);
-                replyPanel.setBackground(new Color(0xFFFFFF));
+                replyPanel.setBackground(new Color(0x81FFFFFF, true));
 
                 JLabel replyCode = new JLabel("Code:");
                 replyCode.setBounds(100, 45, 80, 25);
@@ -480,7 +471,6 @@ public class Main {
                     newFrame.repaint();
                 });
 
-                // Forward Panel
                 JPanel forwardPanel = new JPanel();
                 forwardPanel.setLayout(null);
                 forwardPanel.setSize(mainMenuSize);
@@ -559,7 +549,6 @@ public class Main {
                     newFrame.repaint();
                 });
 
-                // Delete Button
                 deleteButton.addActionListener(e1 -> {
                     while (true) {
                         String code = JOptionPane.showInputDialog(newFrame, "Enter email code:");
@@ -583,7 +572,6 @@ public class Main {
                     }
                 });
 
-                // LogOut Button
                 accQuitButton.addActionListener(e1 -> newFrame.dispose());
 
                 newFrame.add(accMainPanel);
@@ -608,7 +596,6 @@ public class Main {
             mainFrame.repaint();
         });
 
-        // SignUp Panel
         JPanel signUpPanel = new JPanel();
         signUpPanel.setLayout(null);
         signUpPanel.setSize(mainMenuSize);
@@ -672,7 +659,6 @@ public class Main {
             mainFrame.repaint();
         });
 
-        // Quit Button
         quitButton.addActionListener(e -> {
             try {
                 PrintWriter writer = new PrintWriter("C:\\\\Users\\\\moham\\\\IdeaProjects\\\\Millou\\\\src\\\\main\\\\java\\\\aut\\\\ap\\\\log\\\\hibernate.log");
@@ -763,8 +749,8 @@ public class Main {
     }
 
     public static String completeEmail(String email) {
-        if (!email.endsWith("@milou.com"))
-            email += "@milou.com";
+        if (!email.endsWith("@millou.com"))
+            email += "@millou.com";
         return email;
     }
 }
